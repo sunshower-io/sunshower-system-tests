@@ -20,6 +20,7 @@ public class WebTestConfiguration {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
+        options.addArguments("no-sandbox", "disable-gpu");
         return new ChromeDriver(options);
     }
 
